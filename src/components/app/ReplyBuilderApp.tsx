@@ -180,7 +180,7 @@ export default function ReplyBuilderApp() {
     <div className="app-container">
       <nav className="site-nav" aria-label="Easton Tools">
         <a className="brand-link" href="https://tools.eastondev.com/" target="_blank" rel="noreferrer">
-          <span className="brand-mark" aria-hidden="true">E</span>
+          <img className="brand-mark" src="/assets/brand/easton-tools-mark.png" alt="" aria-hidden="true" />
           <span>Easton Tools</span>
         </a>
         <div className="nav-links" aria-label="Primary">

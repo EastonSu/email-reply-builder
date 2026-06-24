@@ -92,16 +92,9 @@ textarea {
 .brand-mark {
   width: 2rem;
   height: 2rem;
-  display: inline-grid;
-  place-items: center;
   border-radius: 50%;
-  background: #fff3e8;
-  border: 1px solid var(--color-border);
-  color: var(--color-primary);
-  font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: 800;
-  box-shadow: var(--shadow);
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .nav-links {
