@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tools.eastondev.com/email-reply-builder/sitemap.xml

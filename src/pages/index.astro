@@ -1,0 +1,83 @@
+---
+import ReplyBuilderApp from '../components/app/ReplyBuilderApp';
+import '../styles/app.css';
+
+const title = 'Email Reply Builder - Reply Emails in Same Thread via Resend API';
+const description = 'Paste raw email, auto-extract threading headers (In-Reply-To, References), and send replies directly via Resend. Perfect for Cloudflare Email Routing + Resend workflow.';
+const keywords = 'resend reply thread, in-reply-to header, email threading, resend api, cloudflare email routing, email reply tool, raw email parser';
+
+const canonicalUrl = 'https://tools.eastondev.com/email-reply-builder';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Email Reply Builder',
+  description: 'A tool to reply emails in the same thread via Resend API. Auto-extracts threading headers from raw email.',
+  url: canonicalUrl,
+  applicationCategory: 'EmailApplication',
+  operatingSystem: 'Web Browser',
+  creator: {
+    '@type': 'Organization',
+    name: 'EastonDev',
+    url: 'https://eastondev.com'
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD'
+  },
+  featureList: [
+    'Extract Message-ID from raw email',
+    'Generate In-Reply-To and References headers',
+    'Auto-fill sender information',
+    'Send via Resend API',
+    'Multi-language support (EN/ZH)'
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title}>
+  <meta name="description" content={description}>
+  <meta name="keywords" content={keywords}>
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Email Reply Builder">
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:site_name" content="Email Reply Builder">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content={canonicalUrl}>
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+</head>
+<body>
+  <main>
+    <h1 style="display:none">Email Reply Builder - Email Reply Tool for Resend API</h1>
+    <!-- client:only keeps this browser-only app out of SSR hydration mismatches. -->
+    <ReplyBuilderApp client:only="react">
+      <p slot="fallback" style="text-align:center;padding:3rem;color:#6c6a64;font-family:var(--font-family,system-ui,sans-serif);">Loading...</p>
+    </ReplyBuilderApp>
+  </main>
+</body>
+</html>

@@ -1,0 +1,175 @@
+---
+const title = 'Privacy Policy - Email Reply Builder';
+const description = 'Email Reply Builder privacy policy. Learn how the hosted tool and open-source app handle raw email, API keys, and Resend sending.';
+const canonicalUrl = 'https://tools.eastondev.com/email-reply-builder/privacy';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p><a href="/">← Back to Email Reply Builder</a></p>
+
+    <section>
+      <h2>Data Processing</h2>
+      <p>
+        Email Reply Builder parses raw email locally in your browser. The parsed preview is not stored by the application.
+      </p>
+    </section>
+
+    <section>
+      <h2>API Key Storage</h2>
+      <p>
+        Your Resend API Key is stored only in browser memory during your session. It is never saved to localStorage or persistent browser storage by this app. When you refresh the page or close the browser, your API Key is cleared automatically.
+      </p>
+    </section>
+
+    <section>
+      <h2>What Gets Sent to Resend</h2>
+      <p>
+        When you click "Send Reply", the following data is sent through the `/api/send` route of the running instance so it can call Resend:
+      </p>
+      <ul>
+        <li>Your API Key (for authentication)</li>
+        <li>The reply email content you composed</li>
+        <li>Email threading headers (Message-ID, In-Reply-To, References)</li>
+        <li>Sender and recipient email addresses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Security Considerations</h2>
+      <p><strong>Important:</strong> This tool has inherent security considerations:</p>
+      <ul>
+        <li>In local development, your API Key is transmitted to your own local server at localhost</li>
+        <li>In the official hosted tool, your API Key is transmitted to the EastonDev server proxy only for the Resend API call</li>
+        <li>We do not store your API Key or email content on EastonDev servers</li>
+        <li>On shared devices, your session data may be visible to others</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>
+        This tool sends emails via Resend (resend.com). Please review Resend's privacy policy for how they handle your data.
+      </p>
+    </section>
+
+    <section>
+      <h2>No Tracking</h2>
+      <p>
+        We do not use any analytics, tracking cookies, or third-party tracking services.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+
+<style>
+  :root {
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-border: #475569;
+    --color-text: #f1f5f9;
+    --color-text-muted: #94a3b8;
+    --color-primary: #3b82f6;
+    --color-warning: #f59e0b;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  h2::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 2px;
+  }
+
+  p, ul {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin: 0.3rem 0;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: var(--color-warning);
+  }
+</style>

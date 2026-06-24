@@ -1,0 +1,47 @@
+{
+  "name": "email-reply-builder",
+  "type": "module",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Open-source Resend email reply helper that preserves email threading headers.",
+  "homepage": "https://tools.eastondev.com/email-reply-builder/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EastonSu/email-reply-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EastonSu/email-reply-builder/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "resend",
+    "email",
+    "email-threading",
+    "gmail",
+    "astro",
+    "react"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/node": "11.0.0",
+    "@astrojs/react": "6.0.0",
+    "astro": "7.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  }
+}
