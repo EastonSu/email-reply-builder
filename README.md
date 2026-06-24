@@ -11,6 +11,8 @@ This is the open-source version of the Email Reply Builder from Easton Tools.
 - Blog and build notes: [Easton Dev Blog](https://eastondev.com)
 - Chinese documentation: [README_CN.md](./README_CN.md)
 
+![Email Reply Builder interface](./docs/assets/email-reply-builder-en.png)
+
 ## Why This Exists
 
 Cloudflare Email Routing is great for receiving emails on a custom domain, but replying from that same custom email address can be awkward. A common workflow looks like this:

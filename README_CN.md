@@ -11,6 +11,8 @@ Email Reply Builder 是一个自定义域名邮箱回复工具，帮助你用自
 - 博客和构建笔记：[Easton Dev Blog](https://eastondev.com)
 - English documentation: [README.md](./README.md)
 
+![Email Reply Builder 中文界面](./docs/assets/email-reply-builder-cn.png)
+
 ## 为什么需要这个工具
 
 Cloudflare Email Routing 很适合用来自定义域名邮箱收信，但“从同一个自定义邮箱地址回复”会比较麻烦。常见流程是：
